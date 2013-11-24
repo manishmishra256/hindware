@@ -1,0 +1,144 @@
+<html>
+<head>
+	<title>Welcome to Dealer Portal</title>
+    <script src="js/jquery-1.9.1.min.js" type="text/javascript"></script>
+    <script src="js/bootstrap.min.js" type="text/javascript"></script>
+	<link href="css/bootstrap.min.css" rel="stylesheet" type="text/css" />
+	<link href="css/custom.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+	<form id="form1" class="form-horizontal" runat="server">
+    <div id="topNavBar" class="navbar navbar-inverse">
+        <div class="container">
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-ex1-collapse">
+                    <span class="sr-only">Toggle navigation</span> <span class="icon-bar"></span><span
+                        class="icon-bar"></span><span class="icon-bar"></span>
+                </button>
+                <a class="navbar-brand" href="../Dashboard.aspx">DEALER PORTAL</a>
+            </div>
+            <div class="collapse navbar-collapse navbar-ex1-collapse">
+                <ul id="nav" class="nav navbar-nav pull-right">
+                    <li class="dropdown"><a href="#" class="dropdown-toggle" data-toggle="dropdown"><span
+                        class="glyphicon glyphicon-user"></span>  <span id="spnUserName">Stephen Luise</span>
+                        <b class="caret"></b></a>
+                        <ul class="dropdown-menu">
+                        <li><a href="Login.htm" id="lnkLogout"><span class="glyphicon glyphicon-log-out"></span> Logout</a></li>
+                        </ul>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </div>
+<div class="container">
+<div class="row">
+	<div class="col-lg-2">
+		<ul class="dropdown-menu" role="menu" aria-labelledby="dropdownMenu" style="display: block; position: static; ; *width: 180px;">
+			<li class="dropdown-submenu"><a href="#">My Info</a>
+				<ul class="dropdown-menu">
+					<li class="dropdown-submenu"><a href="#">Order Related</a>
+						<ul class="dropdown-menu">
+							<li><a href="#">New Order</a></li>		
+							<li><a href="#">Stock Report</a></li>		
+							<li><a href="#">Replacement Request</a></li>		
+						</ul>
+					</li>	
+					<li><a href="#">Sales & Financial Data</a>
+						<ul class="dropdown-menu">
+							<li><a href="#">Sales History & Transport Detail</a></li>		
+							<li><a href="#">Advance Cheque</a></li>		
+							<li><a href="#">Credit Note Info</a></li>		
+							<li><a href="#">Outstanding of the Dealer</a></li>	
+							<li><a href="#">'C' Form Pending From The Dealer</a></li>
+							<li><a href="#">Statement of Accounts</a></li>								
+						</ul>
+					</li>		
+					<li><a href="#">Branding Request</a></li>
+					<li><a href="#">Dealer Issue Redressal Portal</a></li>
+				</ul>	
+			</li>
+			<li><a href="#">Business Content</a>
+				<ul class="dropdown-menu">
+					<li><a href="#">Product Catalog</a></li>
+					<li><a href="#">Update Price List</a></li>
+					<li><a href="#">My Scheme</a></li>
+					<li><a href="#">My Sub Dealer Scheme</a></li>
+					<li><a href="#">Existing Sub Dealers</a></li>
+				</ul>
+			</li>
+			<li class="dropdown-submenu"><a tabindex="-1" href="#">My Map</a>
+				<ul class="dropdown-menu">
+					<li><a tabindex="-1" href="#">Tag My Location</a></li>
+					<li><a tabindex="-1" href="#">Map My Sub Dealers</a></li>
+				</ul>
+			</li>
+			<li class="dropdown-submenu"><a tabindex="-1" href="#">What's New!</a>
+				<ul class="dropdown-menu">
+					<li><a tabindex="-1" href="#">New Product Information</a></li>
+					<li><a tabindex="-1" href="#">Delaer of the Month</a></li>
+				</ul>
+			</li>
+			<li class="dropdown-submenu"><a tabindex="-1" href="#">Support</a>
+				<ul class="dropdown-menu">
+					<li><a tabindex="-1" href="#">Tutorial</a></li>
+					<li><a tabindex="-1" href="#">Contact Service Center</a></li>
+				</ul>
+			</li>  
+		</ul>		
+	</div>
+	
+	<div class="col-lg-10">
+		<div class="panel panel-danger">
+            <div class="panel-heading">
+                <h3 class="panel-title text-center"><b>DEALER	TARGET	AND	ACHIEVEMENT</b></h3>
+            </div>
+            <div class="panel-body">
+				<div id="filter" class="col-lg-12" style="padding:15px;margin-bottom:15px">
+					<div class="col-lg-6"><span style="color:Green;font-weight:bold">Quater:</span> 3rd (Aug 2013 - Nov 2013)</div>
+					<div class="col-lg-3 col-lg-offset-3"><span style="color:Green;font-weight:bold">As of Date: </span>5th Septemper 2013 </div>
+				</div>
+				<div class="table-responsiv">
+					<table class="table table-bordered">
+					<tr><th>Dealer Name</th><th>Last Name</th><th>Email address</th><th>Volume</th><th>Status</th>
+					<th>Invoice Date</th>
+					</tr>
+					<tr>
+					<td>testing4</td><td>testingLast</td><td>test33@test.com</td><td>300 ml</td><td>Unlocked</td><td>11/20/2013 8:40:47 AM</td>
+					</tr><tr>
+					<td>ratufa</td><td>tech</td><td>ratufatech@gmail.com</td><td>300 ml</td><td>Unlocked</td><td>11/20/2013 12:07:54 AM</td>
+					</tr><tr>
+					<td>testing4</td><td>testingLast</td><td>test4@test.com</td><td>300 ml</td><td>Unlocked</td><td>11/19/2013 2:38:55 PM</td>
+					</tr><tr>
+					<td>Sandeep1</td><td>Sharma1</td><td>sandeep@gmail.com</td><td>300 ml</td><td>Unlocked</td><td>11/19/2013 3:10:53 AM</td>
+					</tr><tr>
+					<td>hshfjfjd</td><td>bdhdhrhfj</td><td>sbvsbd@hshs.cj</td><td>300 ml</td><td>Trial</td><td>11/19/2013 2:09:45 AM</td>
+					</tr><tr>
+					<td>fhjh</td><td>cgjjh</td><td>fghh@hh.com</td><td>300 ml</td><td>Trial</td><td>11/11/2013 5:08:37 AM</td>
+				</tr><tr>
+					<td>testing4</td><td>testingLast</td><td>test4@test.com</td><td>300 ml</td><td>Unlocked</td><td>11/19/2013 2:38:55 PM</td>
+					</tr><tr>
+					<td>Sandeep1</td><td>Sharma1</td><td>sandeep@gmail.com</td><td>300 ml</td><td>Unlocked</td><td>11/19/2013 3:10:53 AM</td>
+					</tr><tr>
+					<td>hshfjfjd</td><td>bdhdhrhfj</td><td>sbvsbd@hshs.cj</td><td>300 ml</td><td>Trial</td><td>11/19/2013 2:09:45 AM</td>
+					</tr><tr>
+					<td>fhjh</td><td>cgjjh</td><td>fghh@hh.com</td><td>300 ml</td><td>Trial</td><td>11/11/2013 5:08:37 AM</td>
+					</tr>
+				</table>
+			</div>
+			<div>
+				<ul class="pager">
+					<li class="previous"><a href="#">&larr; Previous</a></li>
+					<li><a href="#">1</a></li>
+					<li><a href="#">2</a></li>
+					<li><a href="#">3</a></li>
+					<li><a href="#">4</a></li>
+					<li><a href="#">5</a></li>
+					<li class="next"><a href="#">Next &rarr;</a></li>
+				</ul>
+			</div>
+        </div>
+	<div>
+</div>   
+</div>
+</form>
+</body>
