@@ -115,10 +115,10 @@
         <div id="scriptDiv">
 		    <!-- scripts are kept at the end of the page -->
 			<script type="text/javascript">
-			
                 //make ajax request to get the data
-                var url = "Data/dealerTarget.php"
-                makeAjaxRequest(url,{},dealerTarget_Returned,null,"POST")
+                var url = "Data/dealerTarget.php";  
+                var data ={dealerCode:'100426'};
+                makeAjaxRequest(url,data,dealerTarget_Returned,null,"POST")
 
                 function dealerTarget_Returned(mydata){
                     jQuery("#list2").jqGrid({

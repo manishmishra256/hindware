@@ -13,6 +13,7 @@ function makeAjaxRequest(url,data,_callBack,_failure,type){
 	   	   _callBack(data);
 	   },
 	   error:function(jqXHR, textStatus, errorThrown){
+	   	debugger;
 	      if(!_failure){
 	      	console.log(errorThrown);
 	      }
