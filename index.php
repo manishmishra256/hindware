@@ -2,11 +2,16 @@
 <html lang="en" xmlns="http://www.w3.org/1999/xhtml">
 <head>
     <meta charset="utf-8" />
-    <title>Welcome to Dealer Portal</title>
+	<title>Welcome to Dealer Portal</title>
+	<link href="css/bootstrap.min.css" rel="stylesheet" type="text/css" />
+	<link href="css/jquery-ui-custom.css" rel="stylesheet" type="text/css" />
+	<link href="css/custom.css" rel="stylesheet" type="text/css" />
+
+	<link rel="stylesheet" type="text/css" href="jqGrid/css/ui.jqgrid.css">
     <script src="js/jquery-1.9.1.min.js" type="text/javascript"></script>
     <script src="js/bootstrap.min.js" type="text/javascript"></script>
-    <link href="css/bootstrap.min.css" rel="stylesheet" type="text/css" />
-    <link href="css/custom.css" rel="stylesheet" type="text/css" />
+    <script src="jqGrid/js/jquery.jqGrid.min.js"type="text/javascript" ></script>
+	<script src="js/hw.js"type="text/javascript" ></script>
 </head>
 <body>
     <form id="form1" class="form-horizontal" runat="server">
@@ -91,122 +96,47 @@
                 <div class="col-lg-10">
                     <div class="panel panel-danger">
                         <div class="panel-heading">
-                            <h3 class="panel-title text-center"><b>DEALER	TARGET	AND	ACHIEVEMENT</b></h3>
+                            <h3 class="panel-title text-center"><b>DEALER TARGET AND ACHIEVEMENT</b></h3>
                         </div>
                         <div class="panel-body">
                             <div id="filter" class="col-lg-12" style="padding: 15px; margin-bottom: 15px">
                                 <div class="col-lg-6"><span style="color: Green; font-weight: bold">Quater:</span> 3rd (Aug 2013 - Nov 2013)</div>
                                 <div class="col-lg-3 col-lg-offset-3"><span style="color: Green; font-weight: bold">As of Date: </span>5th Septemper 2013 </div>
                             </div>
-                            <div class="table-responsiv">
-                                <table class="table table-bordered">
-                                    <tr>
-                                        <th>Dealer Name</th>
-                                        <th>Last Name</th>
-                                        <th>Email address</th>
-                                        <th>Volume</th>
-                                        <th>Status</th>
-                                        <th>Invoice Date</th>
-                                    </tr>
-                                    <tr>
-                                        <td>testing4</td>
-                                        <td>testingLast</td>
-                                        <td>test33@test.com</td>
-                                        <td>300 ml</td>
-                                        <td>Unlocked</td>
-                                        <td>11/20/2013 8:40:47 AM</td>
-                                    </tr>
-                                    <tr>
-                                        <td>ratufa</td>
-                                        <td>tech</td>
-                                        <td>ratufatech@gmail.com</td>
-                                        <td>300 ml</td>
-                                        <td>Unlocked</td>
-                                        <td>11/20/2013 12:07:54 AM</td>
-                                    </tr>
-                                    <tr>
-                                        <td>testing4</td>
-                                        <td>testingLast</td>
-                                        <td>test4@test.com</td>
-                                        <td>300 ml</td>
-                                        <td>Unlocked</td>
-                                        <td>11/19/2013 2:38:55 PM</td>
-                                    </tr>
-                                    <tr>
-                                        <td>Sandeep1</td>
-                                        <td>Sharma1</td>
-                                        <td>sandeep@gmail.com</td>
-                                        <td>300 ml</td>
-                                        <td>Unlocked</td>
-                                        <td>11/19/2013 3:10:53 AM</td>
-                                    </tr>
-                                    <tr>
-                                        <td>hshfjfjd</td>
-                                        <td>bdhdhrhfj</td>
-                                        <td>sbvsbd@hshs.cj</td>
-                                        <td>300 ml</td>
-                                        <td>Trial</td>
-                                        <td>11/19/2013 2:09:45 AM</td>
-                                    </tr>
-                                    <tr>
-                                        <td>fhjh</td>
-                                        <td>cgjjh</td>
-                                        <td>fghh@hh.com</td>
-                                        <td>300 ml</td>
-                                        <td>Trial</td>
-                                        <td>11/11/2013 5:08:37 AM</td>
-                                    </tr>
-                                    <tr>
-                                        <td>testing4</td>
-                                        <td>testingLast</td>
-                                        <td>test4@test.com</td>
-                                        <td>300 ml</td>
-                                        <td>Unlocked</td>
-                                        <td>11/19/2013 2:38:55 PM</td>
-                                    </tr>
-                                    <tr>
-                                        <td>Sandeep1</td>
-                                        <td>Sharma1</td>
-                                        <td>sandeep@gmail.com</td>
-                                        <td>300 ml</td>
-                                        <td>Unlocked</td>
-                                        <td>11/19/2013 3:10:53 AM</td>
-                                    </tr>
-                                    <tr>
-                                        <td>hshfjfjd</td>
-                                        <td>bdhdhrhfj</td>
-                                        <td>sbvsbd@hshs.cj</td>
-                                        <td>300 ml</td>
-                                        <td>Trial</td>
-                                        <td>11/19/2013 2:09:45 AM</td>
-                                    </tr>
-                                    <tr>
-                                        <td>fhjh</td>
-                                        <td>cgjjh</td>
-                                        <td>fghh@hh.com</td>
-                                        <td>300 ml</td>
-                                        <td>Trial</td>
-                                        <td>11/11/2013 5:08:37 AM</td>
-                                    </tr>
-                                </table>
+                            <div class="table-responsive" style="padding:10px;">
+                                	<table id="list2" class="table table-bordered"></table>
+									<div id="pager2"></div>
                             </div>
-                            <div>
-                                <ul class="pager">
-                                    <li class="previous"><a href="#">&larr; Previous</a></li>
-                                    <li><a href="#">1</a></li>
-                                    <li><a href="#">2</a></li>
-                                    <li><a href="#">3</a></li>
-                                    <li><a href="#">4</a></li>
-                                    <li><a href="#">5</a></li>
-                                    <li class="next"><a href="#">Next &rarr;</a></li>
-                                </ul>
-                            </div>
-                        </div>
-                        <div>
                         </div>
                     </div>
                 </div>
             </div>
+        </div>
+        <div id="scriptDiv">
+		    <!-- scripts are kept at the end of the page -->
+			<script type="text/javascript">
+			
+                //make ajax request to get the data
+                var url = "Data/dealerTarget.php"
+                makeAjaxRequest(url,{},dealerTarget_Returned,null,"POST")
+
+                function dealerTarget_Returned(mydata){
+                    jQuery("#list2").jqGrid({
+                        datatype: "local",
+                        //height: 250,
+                        autowidth:true,
+                        colNames:['Sales','Target', 'Achievement'],
+                        colModel:[
+                            {name:'Sales',index:'Sales', width:90, sorttype:"int"},
+                            {name:'Target',index:'Target', width:100, sorttype:"float"},
+                            {name:'Achievement',index:'Achievement', width:130, align:"right", sorttype:"int"}
+                        ],
+                        multiselect: true
+                    });
+                for(var i=0;i<=mydata.length;i++)   
+                    jQuery("#list2").jqGrid('addRowData',i+1,mydata[i]);
+                }
+			</script>
         </div>
     </form>
 </body>
