@@ -49,9 +49,10 @@ body
 /* overwrited properties*/
 .navbar
 {
+	border:none;
 	background-color:#B94A48;
-	border-color:#CCC;
 	color:#FFF;
+	border-radius: 0px 0px;
 }
 .navbar-inverse .navbar-brand
 {
