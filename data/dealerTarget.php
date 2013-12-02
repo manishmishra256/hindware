@@ -1,7 +1,7 @@
 <?php
 
 	//create connection
-	$mysqli = new mysqli("localhost","root","manish","hindware");
+	$mysqli = new mysqli("localhost","root1","hindware","hindware");
 	if($mysqli->connect_error)
 	{
 		die("$mysqli->connect_errno: $mysqli->connect_error");

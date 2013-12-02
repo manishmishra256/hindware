@@ -3,7 +3,7 @@ function makeAjaxRequest(url,data,_callBack,_failure,type){
 	if(!type){
 		type='GET';
 	}
-
+debugger;
     $.ajax({
 	   url:url,
 	   datatype:"application/json",

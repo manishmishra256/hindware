@@ -1,29 +1,25 @@
 <?php
 
 	/* Global variables*/
-	$host;
-	$username;
-	$password;
-	$dbName;
-
+	$host ="localhost";
+	$username ="root1";
+	$password ="hindware";
+	$dbName ="hindware";
+	
 	$EmpCode;
 	$RouteDate;
 	$Area;
-
+		
 	if (isset($_POST)) {
-		$host =$_POST["host"];
-		$username =$_POST["username"];
-		$password =$_POST["password"];
-		$dbName =$_POST["dbName"];
-
 		$EmpCode=$_POST["empCode"];
 		$RouteDate=$_POST["routeDate"];
 		$Area=$_POST["area"];
+		
 	}
 	else{
 		$host ="localhost";
-		$username ="root";
-		$password ="manish";
+		$username ="root1";
+		$password ="hindware";
 		$dbName ="hindware";	
 	}
 
@@ -45,7 +41,7 @@
 	}
 	else
 	{
-		$stmt->bind_param("s", $EmpCode, $RouteDate, $Area);
+		$stmt->bind_param("sss", $EmpCode, $RouteDate, $Area);
 
 		$stmt->execute();
         $result = $stmt->get_result();

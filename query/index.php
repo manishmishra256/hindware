@@ -141,7 +141,7 @@
                                         </div>
                                         <div class="form-group">
                                             <div class="col-sm-offset-2 col-md-9">
-                                                <button type="submit" class="btn btn-default">Insert Record</button>
+                                                <button type="submit" class="btn btn-default" id="btnARPSubmit">Insert Record</button>
                                                 <button type="submit" class="btn btn-default">Clear All</button>
                                             </div>
                                         </div>
@@ -524,9 +524,9 @@
                                 <div class="section-content">
                                     <form class="form-horizontal" role="form">
                                         <div class="form-group">
-                                            <label for="txtREEmplyeeCode" class="col-md-3 control-label">Employee Code</label>
+                                            <label for="txtREEmployeeCode" class="col-md-3 control-label">Employee Code</label>
                                             <div class="col-md-9">
-                                                <input type="text" class="form-control" id="txtREEmplyeeCode" placeholder="Employee Code">
+                                                <input type="text" class="form-control" id="txtREEmployeeCode" placeholder="Employee Code">
                                             </div>
                                         </div>
                                         <div class="form-group">
@@ -579,7 +579,7 @@
                                         </div>
                                         <div class="form-group">
                                             <div class="col-sm-offset-2 col-md-9">
-                                                <button type="submit" class="btn btn-default">Insert Record</button>
+                                                <button type="submit" class="btn btn-default" id="btnRESubmit">Insert Record</button>
                                                 <button type="submit" class="btn btn-default">Clear All</button>
                                             </div>
                                         </div>
@@ -607,45 +607,45 @@
                                 <div class="section-content">
                                     <form class="form-horizontal" role="form">
                                         <div class="form-group">
-                                            <label for="inputHost" class="col-md-3 control-label">Host</label>
+                                            <label for="txtRNDHost" class="col-md-3 control-label">Host</label>
                                             <div class="col-md-9">
-                                                <input type="text" class="form-control" id="inputHost" placeholder="Host">
+                                                <input type="text" class="form-control" id="txtRNDHost" placeholder="Host">
                                             </div>
                                         </div>
                                         <div class="form-group">
-                                            <label for="inputUsername" class="col-md-3 control-label">Username</label>
+                                            <label for="txtRNDUsername" class="col-md-3 control-label">Username</label>
                                             <div class="col-md-9">
-                                                <input type="text" class="form-control" id="inputUsername" placeholder="Username">
+                                                <input type="text" class="form-control" id="txtRNDUsername" placeholder="Username">
                                             </div>
                                         </div>                                        
                                         <div class="form-group">
-                                            <label for="inputPassword" class="col-md-3 control-label">Password</label>
+                                            <label for="txtRNDPassword" class="col-md-3 control-label">Password</label>
                                             <div class="col-md-9">
-                                                <input type="password" class="form-control" id="inputPassword" placeholder="Password">
+                                                <input type="password" class="form-control" id="txtRNDPassword" placeholder="Password">
                                             </div>
                                         </div>
                                         <div class="form-group">
-                                            <label for="inputDbname" class="col-md-3 control-label">Db Name</label>
+                                            <label for="txtRNDDbName" class="col-md-3 control-label">Db Name</label>
                                             <div class="col-md-9">
-                                                <input type="text" class="form-control" id="inputDbname" placeholder="Db Name">
+                                                <input type="text" class="form-control" id="txtRNDDbName" placeholder="Db Name">
                                             </div>
                                         </div>
                                         <div class="form-group">
-                                            <label for="inputEmpCode" class="col-md-3 control-label">Employee Code</label>
+                                            <label for="txtRNDEmployeeCode" class="col-md-3 control-label">Employee Code</label>
                                             <div class="col-md-9">
-                                                <input type="text" class="form-control" id="inputEmpCode" placeholder="Employee Code">
+                                                <input type="text" class="form-control" id="txtRNDEmployeeCode" placeholder="Employee Code">
                                             </div>
                                         </div>
                                         <div class="form-group">
-                                            <label for="inputRouteDate" class="col-md-3 control-label">Route Date</label>
+                                            <label for="txtRNDRouteDate" class="col-md-3 control-label">Route Date</label>
                                             <div class="col-md-9">
-                                                <input type="text" class="form-control" id="inputRouteDate" placeholder="Route Date">
+                                                <input type="text" class="form-control" id="txtRNDRouteDate" placeholder="Route Date">
                                             </div>
                                         </div>
                                         <div class="form-group">
-                                            <label for="inputRouteDate" class="col-md-3 control-label">Area</label>
+                                            <label for="txtRNDArea" class="col-md-3 control-label">Area</label>
                                             <div class="col-md-9">
-                                                <input type="text" class="form-control" id="inputRouteDate" placeholder="Area">
+                                                <input type="text" class="form-control" id="txtRNDArea" placeholder="Area">
                                             </div>
                                         </div>
                                         <div class="form-group">
@@ -716,7 +716,7 @@
                                         <div class="form-group">
                                             <label for="inputRouteDate" class="col-md-3 control-label">Area</label>
                                             <div class="col-md-9">
-                                                <input type="text" class="form-control" id="inputRouteDate" placeholder="Area">
+                                                <input type="text" class="form-control" id="inputRouteArea" placeholder="Area">
                                             </div>
                                         </div>
                                         <div class="form-group">
@@ -785,6 +785,30 @@
                     </div>
                 </div>
                 <!-- Config Ends -->  
+				
+				<!-- Result Panel Starts -->
+				 <div id="ResultPanel" class="content" style="display:none">
+                    <div class="panel panel-default pad-10">
+                        <div class="row">
+                            <div class="col-md-12"  >
+                                <div class="section-header">
+                                    <i class="glyphicon glyphicon-circle-arrow-right">
+                                        &nbsp;
+                                    </i>Result
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-md-12" >
+								<div class="alert alert-success alert-dismissable">
+									<button type="button" class="close" data-dismiss="alert" aria-hidden="true">&times;</button>
+									<span id="spnRP"></span>
+								</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>               
+				<!-- Result Panel Ends -->
             </div>
             <!-- Right Content Ends -->
         </div>
@@ -792,31 +816,51 @@
     <div id="scriptDiv">
             <!-- scripts are kept at the end of the page -->
             <script type="text/javascript">
-                //make ajax request to get the data
-                var url = "/data/dealerTarget.php";  
-                var data ={
-                            host:'100426',
-                            username:'',
-                            password:'',
-                            dbName:'',
-                            empCode:'',
-                            routeDate:'',
-                            area:''
+				(function(){
+				
+				<!-- Add Route Panel Script Starts -->
+					$('#btnARPSubmit').on('click',function(){
+					var url = "addRoutePlan.php";  
+					var data ={
+                        empCode:$('#txtARPEmployeeCode').val(),
+                        routeDate:$('#txtARPRouteDate').val(),
+                        area:$('#txtARPArea').val()
                     };
-                
-                //$host =$_POST["host"];
-                //$username =$_POST["username"];
-                //$password =$_POST["password"];
-                //$dbName =$_POST["dbName"];
-
-                //$EmpCode=$_POST["empCode"];
-                //$RouteDate=$_POST["routeDate"];
-                //$Area=$_POST["area"];
-
-                //makeAjaxRequest(url,data,dealerTarget_Returned,null,"POST")
-                function dealerTarget_Returned(mydata){
-                    alert(mydata);
-                }
+					makeAjaxRequest(url,data,dealerTarget_Returned,null,"POST")
+					function dealerTarget_Returned(mydata){
+						//$('#spnRP').text(mydata);
+						alert(mydata);
+					}
+					});
+					
+				<!-- Add Register Employee Script Starts -->
+					$('#btnRESubmit').on('click',function(){
+					var url = "RegisterEmployee.php";  
+					var data ={
+                        EmpCode:$('#txtREEmployeeCode').val(),
+                        EmpName:$('#txtREEmployeeName').val(),
+                        State:$('#txtREState').val(),
+						Territory:$('#txtRETerritory').val(),
+						Division:$('#txtREDivision').val(),
+						Reporting:$('#txtREReporting').val(),
+						ReportEmpCode:$('#txtRECode').val(),
+						IMEI:$('#txtREImei').val(),
+						Password:$('#txtREPassword').val()						
+                    };
+					makeAjaxRequest(url,data,success,null,"POST")
+					function success(result){
+						//$('#spnRP').text(mydata);
+						alert(result);
+					}
+					});
+				<!-- Add Register Employee Script Ends -->
+				
+				
+				
+				
+				
+				}(jQuery));
+				
                 $(document).ready(function(){
                     $('.scriptItem').on('click',function(){
                         $(this).closest('ul').find('li').removeClass('active');
